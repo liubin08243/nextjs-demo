@@ -1,4 +1,34 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Next.js 演示项目
+
+这是一个简单的 Next.js 演示项目模板，默认显示 "Hello World"。
+
+## 开始使用
+
+首先，安装依赖：
+
+```bash
+npm install
+```
+
+然后，运行开发服务器：
+
+```bash
+npm run dev
+```
+
+打开 [http://localhost:3000](http://localhost:3000) 查看结果。
+
+## 项目结构
+
+- `src/app/page.tsx` - 主页组件
+- `src/app/layout.tsx` - 全局布局组件
+
+## 技术栈
+
+- [Next.js](https://nextjs.org/) - React 框架
+- [React](https://reactjs.org/) - JavaScript 库
+- [TypeScript](https://www.typescriptlang.org/) - JavaScript 的超集
+- [Tailwind CSS](https://tailwindcss.com/) - CSS 框架
 
 ## Getting Started
 

@@ -22,6 +22,8 @@ npm run dev
 
 - `src/app/page.tsx` - 主页组件
 - `src/app/layout.tsx` - 全局布局组件
+- `Dockerfile` - Docker镜像构建配置
+- `.github/workflows/docker-build.yml` - GitHub Actions自动构建工作流
 
 ## 技术栈
 
@@ -29,6 +31,40 @@ npm run dev
 - [React](https://reactjs.org/) - JavaScript 库
 - [TypeScript](https://www.typescriptlang.org/) - JavaScript 的超集
 - [Tailwind CSS](https://tailwindcss.com/) - CSS 框架
+- [Docker](https://www.docker.com/) - 容器化部署
+- [GitHub Actions](https://github.com/features/actions) - CI/CD工作流
+
+## Docker部署
+
+### 本地构建和运行
+
+在本地构建Docker镜像：
+
+```bash
+docker build -t nextjs-demo .
+```
+
+运行Docker容器：
+
+```bash
+docker run -p 3000:3000 nextjs-demo
+```
+
+### 使用GitHub容器注册表
+
+本项目配置了GitHub Actions自动构建工作流。当您推送代码到main分支时，会自动构建Docker镜像并发布到GitHub容器注册表。
+
+从GitHub容器注册表拉取并运行镜像：
+
+```bash
+# 替换 {username} 为您的GitHub用户名
+docker pull ghcr.io/{username}/nextjs-demo:latest
+docker run -p 3000:3000 ghcr.io/{username}/nextjs-demo:latest
+```
+
+## 注意事项
+
+确保您的GitHub仓库已启用GitHub Actions，并且允许写入包权限。
 
 ## Getting Started
 

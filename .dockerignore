@@ -1,0 +1,29 @@
+# 依赖目录
+node_modules
+npm-debug.log
+
+# Next.js构建输出
+.next
+out
+
+# 测试文件
+__tests__
+coverage
+
+# 环境变量文件
+.env*
+!.env.example
+
+# git相关
+.git
+.gitignore
+
+# 编辑器配置
+.vscode
+.idea
+
+# 其他
+README.md
+.github
+Dockerfile
+.dockerignore 
